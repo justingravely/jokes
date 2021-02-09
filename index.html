@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body {
+      background-color: black;
+      display: flex;
+      margin: auto;
+      height: 60vh;
+    }
+
+    h1 {
+      color: white;
+      margin: auto;
+      font-size: 1.5em;
+    }
+
+    #butt {
+      margin: auto;
+      width: 5em;
+      font-weight: bold;
+      height: 3em;
+    }
+
+    .wrap {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+    }
+
+    .h1-wrap {
+      display: flex;
+      margin-bottom: 1em;
+      width: fit-content;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+    <div class="h1-wrap">
+      <h1 id="se"> Kisser </h1>
+      <h1 id="ra">&nbsp;Cigarette&nbsp;</h1>
+      <h1 id="cl"> Giant </h1>
+    </div>
+    <button id="butt" onclick="picker()">Clike Here</button>
+  </div>
+
+  <script> ////////////////////
+
+    var randomRace = Math.floor(Math.random() * 5);
+    var randomClass = Math.floor(Math.random() * 8);
+    var randomSex = Math.floor(Math.random() * 2);
+    var raceText = document.getElementById("ra");
+    var classText = document.getElementById("cl");
+    var sexText = document.getElementById("se");
+    var button = document.getElementById("butt");
+
+    var picker = function () {
+      randomRace = Math.floor(Math.random() * 5);
+      randomClass = Math.floor(Math.random() * 8);
+      randomSex = Math.floor(Math.random() * 2);
+      console.log(randomSex, randomRace, randomClass)
+      switch(randomRace) {
+        case 0: 
+        raceText.innerHTML = "&nbsp;Humban&nbsp;"
+        break;
+        case 1: 
+        raceText.innerHTML = "&nbsp;Floppa&nbsp;"
+        break;
+        case 2: 
+        raceText.innerHTML = "&nbsp;Bige-Hoomban&nbsp;"
+        break;
+        case 3: 
+        raceText.innerHTML = "&nbsp;Flytrap&nbsp;"
+        break;
+        case 4: 
+        raceText.innerHTML = "&nbsp;Fleem-Person&nbsp;"
+        break;
+      }
+      switch(randomClass) {
+        case 0: 
+        classText.innerHTML = "Smack-Daddy"
+        break;
+        case 1: 
+        classText.innerHTML = "New-Ager"
+        break;
+        case 2: 
+        classText.innerHTML = "Doggy-Bender"
+        break;
+        case 3: 
+        classText.innerHTML = "Drama-Club-Student"
+        break;
+        case 4: 
+        classText.innerHTML = "Scarymancer"
+        break;
+        case 5: 
+        classText.innerHTML = "Stinky-Farter"
+        break;
+        case 6: 
+        classText.innerHTML = "Explosion"
+        break;
+        case 7: 
+        classText.innerHTML = "Coward"
+        break;
+      }
+      if (randomSex == 0) {
+        sexText.innerHTML = "Male"
+      } else {
+        sexText.innerHTML = "Not-Male"
+      }
+
+    }
+
+  </script>
+
+</body>
+
+</html>
